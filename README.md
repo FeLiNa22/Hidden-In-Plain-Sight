@@ -27,6 +27,7 @@ Our program is able to encode files of literally any data type, because we encod
 The encoding works as every pixel of the image requires almost 32 bits each and changing the least significant bits of these pixels is unnoticeable by the human eye. We take advantage of this fact to encode as every single pixel with each bit of the file being encoded. 
 
 An example is provided 'example/shakespeare.bmp'.
+
 ![shakespeare.bmp](https://github.com/FeLiNa22/steganography/blob/main/example/shakespeare.bmp)
 
 This image has been encoded with the entire works of Shakespeare (in the form of a .txt file) and all the data is encrypted using the password 'romeo'.
