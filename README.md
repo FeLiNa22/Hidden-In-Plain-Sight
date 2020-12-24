@@ -14,6 +14,9 @@ Our program is able to encode files of literally any data type.  An example is i
 For a more detailed description of the encryption process, design implementations and testing, see the 'Extension' section of the 'Report.pdf' file.
 
 ## How to use
-Can be run using the following terminal commands (Note :  password is optional):  
-Encoding:./extension -e -i <*.bmp> <any file> -o <*.bmp> -p <password>  
-Decoding:./extension -d -i <*.bmp> -p <password>
+Can be run using the following terminal commands (Note : all flags are optional):  
+    
+    Encoding: ./steg encode <*.bmp> <file to encode> -o <output path *.bmp> -p <password to encrypt data>  
+    Decoding: ./steg decode <*.bmp> -p <password>
+
+NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not be secure
