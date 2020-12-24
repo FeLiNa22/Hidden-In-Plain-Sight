@@ -21,9 +21,10 @@ NOTE: if no password is provided, the "file to encode" will not be encrypted and
 
 
 ## Implementation
-To enhance the security of the encryption process, we implemented a password encryption process.This  password  can  be  optionally  specified  using  the  flag '-p' <password>,  and  this  password  is  converted  into  the starting key for the encryption process using a hashing algorithm.
-  
+
 Our program is able to encode files of literally any data type, because we encode the data into the image at a bit level rather than through grouping data such as words.  
+
+The encoding works as every pixel of the image requires almost 32 bits each and changing the least significant bits of these pixels is unnoticeable by the human eye. We take advantage of this fact to encode as every single pixel with each bit of the file being encoded. 
 
 An example is provided 'example/shakespeare.bmp'.
 ![shakespeare.bmp](https://github.com/FeLiNa22/steganography/blob/main/example/shakespeare.bmp)
@@ -38,10 +39,12 @@ Run
     
 and you will find a file 'full_shakespeare.txt' has appeared.
  
- 
+To enhance the security of the encoded image we also added the optional password to encrypt the data, before it is even encoded into the image.
+This prevents anyone who manages to steal the image from actually decoding the senssitive data.
+
+This  password  can  be  optionally  specified  using  the  flag '-p' <password>,  and  this  password  is  converted  into  the starting key for the encryption process using a hashing algorithm.
 
 For a more detailed description of the encryption process, design implementations and testing, see the 'Extension' section of the 'Report.pdf' file.
-
 
 ## Use Cases
 
