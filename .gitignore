@@ -1,0 +1,5 @@
+cmake-build-debug/
+*.o
+*.bmp
+.idea/
+steg
