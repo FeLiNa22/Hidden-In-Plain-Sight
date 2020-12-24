@@ -1,5 +1,5 @@
 # Steganographic Encoder/Decoder
-A program which can encode/decode any file from a .bmp image (optionally uses encryption for even more security) 
+A program which can encode/decode any file from a .bmp image (optionally uses encryption via a password for even more security) 
 
 ## What is Steganography ?
 Steganography  is  the  practice  of  hiding  sensitive  data  in  plain  sight.   For  our  extension  we  set  out  to  developing a tool such that we could conceal any type of file within a .BMP image,  whilst ensuring the new altered image is essentially indistinguishable from the original.  To challenge ourselves, we took the approach of only producing legacy code (without the use of libraries).
