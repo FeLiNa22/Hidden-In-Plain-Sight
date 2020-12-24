@@ -30,10 +30,11 @@ Can be run using the following terminal commands (Note : all flags are optional)
     Encoding: ./steg encode <*.bmp> <file to encode> -o <output path *.bmp> -p <password to encrypt data>  
     Decoding: ./steg decode <*.bmp> -p <password>
 
-NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not be secure
+NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not as secure
 
 ## Use Cases
 
-If you are trying to send sensitive data without anyone realising, then this is the most perfect solution as it basically hides data in plain sight.
-By this it means you could potentially upload an encoded image onto instagram and then anyone whom knows that it is a steganographic image can then retrieve the file from it.
-The same works for sending the images over Whatsapp and any other social media.  
+If you are trying to send sensitive data through a public medium without anyone noticing then this is the perfect solution for you.
+
+As we basically are hiding data in plain sight you could potentially upload an encoded image onto any social media (we tested instagram) and then anyone who has been provided with the original password to the encoded image can then save the image, decode it using my program and now can read the encoded file.
+The same works for sending images over Whatsapp and any other social media.  
