@@ -40,7 +40,8 @@ steno_data *decode(BMPImage *bmp) {
 }
 
 int decode_BMP(char *BMP_PATH, char *password) {
-    printf("opening %s with passwd %s\n", BMP_PATH, password);
+
+    printf("opening %s ...\n", BMP_PATH);
 
     BMPImage *bmp;
     // loads BMP image into memory
