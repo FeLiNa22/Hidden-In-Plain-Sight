@@ -10,6 +10,8 @@ To enhance the security of the encryption process, we implemented a password enc
 Our program is able to encode files of literally any data type, because we encode the data into the image at a bit level rather than through grouping data such as words.  
 
 An example is provided in the repository './test/out/shakespeare.bmp'.
+![shakespeare.bmp](https://github.com/FeLiNa22/steganography/blob/main/example/shakespeare.bmp)
+
 This image has been encoded with the entire works of Shakespeare (in the form of a .txt file) and all the data is encrypted using the password 'romeo'.
 
 *Don't believe me*
