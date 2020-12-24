@@ -4,6 +4,22 @@ A program which can encode/decode any file from a .bmp image (optionally uses en
 ## What is Steganography ?
 Steganography  is  the  practice  of  hiding  sensitive  data  in  plain  sight.   For  our  extension  we  set  out  to  developing a tool such that we could conceal any type of file within a .BMP image,  whilst ensuring the new altered image is essentially indistinguishable from the original.  To challenge ourselves, we took the approach of only producing legacy code (without the use of libraries).
 
+## Install (Linux only for now)
+    
+    sudo apt-get install gcc make git -y
+    git clone https://github.com/FeLiNa22/steganography.git 
+    cd steganography
+    make
+
+## How to use
+Can be run using the following terminal commands (Note : Anything in brackets is optional):  
+    
+    ./steg encode <input *.bmp> <file to encode> (-o <output path *.bmp>) (-p <password to encrypt data>)  
+    ./steg decode <input *.bmp> (-p <password>)
+
+NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not as secure
+
+
 ## Implementation
 To enhance the security of the encryption process, we implemented a password encryption process.This  password  can  be  optionally  specified  using  the  flag '-p' <password>,  and  this  password  is  converted  into  the starting key for the encryption process using a hashing algorithm.
   
@@ -26,13 +42,6 @@ and you will find a file 'full_shakespeare.txt' has appeared.
 
 For a more detailed description of the encryption process, design implementations and testing, see the 'Extension' section of the 'Report.pdf' file.
 
-## How to use
-Can be run using the following terminal commands (Note : Anything in brackets is optional):  
-    
-    ./steg encode <input *.bmp> <file to encode> (-o <output path *.bmp>) (-p <password to encrypt data>)  
-    ./steg decode <input *.bmp> (-p <password>)
-
-NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not as secure
 
 ## Use Cases
 
