@@ -1,0 +1,38 @@
+# Directories
+SRC_DIR = src/
+LIB_DIR = lib/
+INC_DIR = inc/
+OBJ_DIR = obj/
+DBG_DIR = debug/
+
+# C Compiler options
+CC 	   = x86_64-w64-mingw32-gcc
+CFLAGS = -Wall -g 
+IFLAGS = -I$(INC_DIR)
+LFLAGS = -L$(LIB_DIR)
+
+# Files to use in compilation
+OBJCTS = main.o bmp.o decode.o encode.o tools.o 
+# Target output
+TARGET = extension.exe
+
+all: $(TARGET)
+
+clean:
+	rm -rf $(OBJ_DIR)/*.o $(TARGET)
+
+test: 
+	sh test.sh
+
+test-clean: 
+	rm -rf $(DBG_DIR)/*.out $(DBG_DIR)/*.txt
+
+# Final output requires no changes
+$(TARGET) : $(addprefix $(OBJ_DIR), $(OBJCTS))
+	$(CC) $(CFLAGS) $(IFLAGS) $(LFLAGS) -o $@ $^
+
+# Compiles all src files into objects
+obj/%.o: src/%.c
+	$(CC) $(CFLAGS) $(IFLAGS) $(LFLAGS) -c $^ -o $@ 
+
+.PHONY: test
