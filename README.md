@@ -18,7 +18,7 @@ This image has been encoded with the entire works of Shakespeare (in the form of
 
 Run 
    
-    './steg decode example/shakespeare.bmp -p romeo'
+    ./steg decode example/shakespeare.bmp -p romeo
     
 and you will find a file 'full_shakespeare.txt' has appeared.
  
@@ -27,10 +27,10 @@ and you will find a file 'full_shakespeare.txt' has appeared.
 For a more detailed description of the encryption process, design implementations and testing, see the 'Extension' section of the 'Report.pdf' file.
 
 ## How to use
-Can be run using the following terminal commands (Note : all flags are optional):  
+Can be run using the following terminal commands (Note : Anything in brackets is optional):  
     
-    Encoding: ./steg encode <*.bmp> <file to encode> -o <output path *.bmp> -p <password to encrypt data>  
-    Decoding: ./steg decode <*.bmp> -p <password>
+    ./steg encode <input *.bmp> <file to encode> (-o <output path *.bmp>) (-p <password to encrypt data>)  
+    ./steg decode <input *.bmp> (-p <password>)
 
 NOTE: if no password is provided, the "file to encode" will not be encrypted and hence will not as secure
 
