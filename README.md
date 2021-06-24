@@ -2,7 +2,7 @@
 A program which can encode/decode any file from a .bmp image (optionally uses encryption via a password for even more security) 
 
 ## What is Steganography ?
-Steganography  is  the  practice  of  hiding  sensitive  data  in  plain  sight.   For  our  extension  we  set  out  to  developing a tool such that we could conceal any type of file within a .BMP image,  whilst ensuring the new altered image is essentially indistinguishable from the original.  To challenge ourselves, we took the approach of only producing legacy code (without the use of libraries).
+Steganography  is  the  practice  of  hiding  sensitive  data  in  plain  sight.   This is a tool that can conceal any type of file or message within a .BMP image,  whilst ensuring the new altered image is essentially indistinguishable from the original. 
 
 ## Install (Linux only for now)
     
@@ -21,9 +21,6 @@ NOTE: if no password is provided, the "file to encode" will not be encrypted and
 
 
 ## Implementation
-
-Our program is able to encode files of literally any data type, because we encode the data into the image at a bit level rather than through grouping data such as words.  
-
 The encoding works as every pixel of the image requires almost 32 bits each and changing the least significant bits of these pixels is unnoticeable by the human eye. We take advantage of this fact to encode as every single pixel with each bit of the file being encoded. 
 
 An example is provided 'example/shakespeare.bmp'.
